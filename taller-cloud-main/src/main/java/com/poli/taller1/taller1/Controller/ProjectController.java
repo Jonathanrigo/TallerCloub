@@ -28,12 +28,6 @@ public class ProjectController {
     }
 
     @PostMapping()
-    public ProjectModel crearProject(@RequestBody ProjectModel project){
-        project.setStartDate(LocalDateTime.now()); //Genera la fecha en el momento que se creo
-        return projectService.crearProject(project);
-    }
-
-    @PostMapping()
     public ResponseEntity<ProjectModel> crearProyecto(@Valid @RequestBody ProjectModel project, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.status(400).build();

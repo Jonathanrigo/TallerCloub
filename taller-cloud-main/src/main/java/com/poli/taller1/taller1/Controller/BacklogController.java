@@ -23,16 +23,11 @@ public class BacklogController {
         return backlogService.mostrarBacklogs();
     }
 
-    @PostMapping()
-    public BacklogModel crearBacklog(@RequestBody BacklogModel backlog){
-
-        return backlogService.crearBacklog(backlog);
-    }
-
     @PutMapping()
     public BacklogModel editarBacklog(@RequestBody BacklogModel backlog){
         return backlogService.crearBacklog(backlog);
     }
+
     @PostMapping()
     @Validated
     public ResponseEntity<BacklogModel> crearBacklog(@Valid @RequestBody BacklogModel backlog, BindingResult bindingResult){

@@ -14,6 +14,37 @@ import java.util.List;
 @Setter
 @Table(name = "backlog")
 public class BacklogModel {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getProjectIdentifier() {
+        return projectIdentifier;
+    }
+
+    public void setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+    }
+
+    public ProjectModel getProject() {
+        return project;
+    }
+
+    public void setProject(ProjectModel project) {
+        this.project = project;
+    }
+
+    public List<ProjectTaskModel> getProjectTask() {
+        return projectTask;
+    }
+
+    public void setProjectTask(List<ProjectTaskModel> projectTask) {
+        this.projectTask = projectTask;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
