@@ -4,7 +4,6 @@ import com.poli.taller1.taller1.Models.BacklogModel;
 import com.poli.taller1.taller1.Repositories.BacklogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
